@@ -22,7 +22,7 @@ body{
     justify-content: center;
     background-position:center;
     min-height: 100vh;
-    background: linear-gradient(#32DC48, #078B6F);
+    background: linear-gradient(#B5EBD2, #46C56D);
     padding: 20px;
     transition: all 0.3s ease;
     background-repeat:no-repeat;
@@ -31,7 +31,7 @@ body{
   
   }
   body.green{
-    background: linear-gradient(#32DC48, #078B6F);
+    background: linear-gradient(#B5EBD2, #46C56D);
   }
 
   body.yellow{
@@ -124,13 +124,13 @@ body{
   .slider .progress-bar{
     height: 100%;
     width: 0%;
-    background: linear-gradient(45deg,#32DC48, #078B6F);
+    background: linear-gradient(45deg,#B5EBD2, #46C56D);
     border-radius: 50px;
     position: relative;
     align-items: center;
   }
   body.green .progress-bar{
-    background: linear-gradient(#32DC48, #078B6F);
+    background: linear-gradient(#B5EBD2, #46C56D);
   }
   
   body.yellow .progress-bar{
@@ -153,7 +153,7 @@ body{
   .slider .thumb{
     height: 25px;
     width: 25px;
-    background: #32DC48;
+    background: #46C56D;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -164,7 +164,7 @@ body{
   }
 
   body.green .thumb{
-    background:#32DC48;
+    background:#46C56D;
   }
 
   body.yellow .thumb{
@@ -189,12 +189,12 @@ body{
     width: 100%;
     border: 2px solid #f6f6f6;
     border-radius: 50%;
-    background: linear-gradient(#32DC48, #078B6F);
+    background: linear-gradient(#B5EBD2, #46C56D);
     display: block;
   }
 
   body.green .thumb span{
-    background: linear-gradient(#32DC48, #078B6F);
+    background: linear-gradient(#B5EBD2, #46C56D);
   }
 
   body.yellow .thumb span{
@@ -371,10 +371,10 @@ body{
 /* this styles the intro box text (start) */
 
 .intro_text button{
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
     outline: none;
     border: none;
     border-radius: 10px;
