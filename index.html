@@ -1,35 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-         <title>Let's talk</title>
-         <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Talk</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
 
-    <body>
+<body>
+    <!-- Intro text to the mood-tracker quiz -->
+    <div class="intro_text">
+        <button>
+            <img class="logo_1" src="logo_1.png"/>
+            <p class="lead-p">Mental Health is important, so let’s talk about it & break the stigma! </p> </br>
+            <p class="lead-p">Our mood check-in feature can help you notice how your thoughts & feelings can impact your life.</p>
+            <img class="arrow" src="arrow.png"/>
+        </button>
+    </div>
 
-        <div class="wrapper">
+    <!-- Slider Box -->
+    <div class="slider_question">
+        <header class="question_title">
+            <h2>How are you feeling today?</h2> </br>
+            <p>Adjust the slider to select your overall mood score</p> 
+        </header>
 
-            <header>
-                <img class="logo" src="logo.png"/>
-            </header>
+        <!-- Slider emotions -->
+        <div class="slider_box">
+            <div class="section">
+                <ul class="emotions">
+                    <li class="slide-emotions"><img src="emotions-5.png" alt="blue"></li>
+                    <li><img src="emotions-4.png" alt="red"></li>
+                    <li><img src="emotions-3.png" alt="orange"></li>
+                    <li><img src="emotions-2.png" alt="yellow"></li>
+                    <li><img src="emotions-1.png" alt="green"></li>
+                </ul>
+            </div>
 
-            <article class="main">
-                <p class="lead-p">Mental Health is important, so let’s talk about it and break the stigma! </p>
-                <p class="lead-p">Our mood check-in feature helps you notice how your thoughts and feelings can impact how you behave, both in and out of work.
-                </p>
-     
-                
-            </article>
+            <div class="slider">
+                <div class="thumb"><span></span></div>
+                <div class="progress-bar"></div>
+                <input type="range" min="0" value="0" max="100">
+            </div>
 
-            <aside class="aside aside-1"></aside>
-
-            <aside class="aside aside-2"></aside>
-
-            <footer class="footer">
-                <a class="btn" href="slider.html" target="_blank" role="button">Start</a>
-            </footer>
-
+            </br></br>
         </div>
-    </body>
-    </html>
+
+        <div class="buttons">
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- question box -->
+    <div class="quiz_box">
+
+        <header class="image">
+            <img class="logo_question" src="logo_1.png"/>
+        </header>
+
+        <section>
+            <div class="question_text">
+                <!-- The quiz questions have been added with JavaScript -->
+            </div>
+
+            <div class="option_list">
+                <!-- The quiz options have been added with JavaScript -->
+            </div>
+        </section>
+
+        <section class="total_que">
+            <!-- The question counter has been added with JavaScript -->
+        </section>
+
+        <!-- The footer of the quiz box included the NEXT button -->
+        <footer>
+
+            <button class="next_btn">Next</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="finish_text">
+            <h3 class="result_title">Well done on checking-in your mood!</h3>
+        </div>
+        <div class="result_text">
+            <!-- The result text has been added with JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+        </div>
+    </div>
+
+   
+
+    <!-- This JS file included the questions, options and answers of the quiz -->
+    <script src="js/questions.js"></script>
+
+    <!-- This JS file includes all the functions and variables to make the quiz work -->
+    <script src="js/script.js"></script>
+
+ 
+
+</body>
+</html>

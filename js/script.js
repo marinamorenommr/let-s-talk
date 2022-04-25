@@ -140,7 +140,7 @@ function showResult(){
         result_text.innerHTML = scoreTag;
     }
     else { // if user selected No in more than 4 questions 
-        let scoreTag = '<span><p> Seems like  </br> Check out this <a href="https://www.mind.org.uk/information-support/">Information and support services</a> to help you with your journey to improving your mental health.</p></span>';
+        let scoreTag = '<span><p> Seems like your mental is stable but could be better!</br> Check out this <a href="https://www.mentalhealth.org.uk/publications/how-to-mental-health">blog</a> and follow the tips to improve your mental health!</p></span>';
         result_text.innerHTML = scoreTag;
     }
 }
