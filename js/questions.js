@@ -22,7 +22,7 @@ let questions = [
 
   {
   numb: 3,
-  question: "Do you feel like you're maintaining a healthy balance between leisure, myself, my career, physical activity, and those I care about?",
+  question: "Do you feel like you're maintaining a healthy balance between leisure, yourself, your career, physical activity, and those you care about?",
   answer: "Yes",
   options: [
     "Yes",
@@ -62,7 +62,7 @@ let questions = [
 
 {
   numb: 7,
-  question: "Regarding your sleeping habits, Do you usually wake up and go to bed at similar times every day?",
+  question: "Regarding your sleeping habits, do you usually wake up and go to bed at similar times every day?",
   answer: "Yes",
   options: [
     "Yes",
@@ -72,7 +72,7 @@ let questions = [
 
 {
   numb: 8,
-  question: "Do you have supportive friendships",
+  question: "Do you have supportive friendships?",
   answer: "Yes",
   options: [
     "Yes",
@@ -100,18 +100,4 @@ let questions = [
   ]
 },
 
-
-// you can uncomment the below codes and make duplicate as more as you want to add question
-// but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
-//   {
-//   numb: 6,
-//   question: "Your Question is Here",
-//   answer: "Correct answer of the question is here",
-//   options: [
-//     "Option 1",
-//     "option 2",
-//     "option 3",
-//     "option 4"
-//   ]
-// },
 ];
