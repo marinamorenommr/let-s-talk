@@ -17,8 +17,8 @@ intro_text.onclick = ()=>{
 continue_btn.onclick = ()=>{
     slider_question.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuetions(0); //calling showQestions function
-    queCounter(1); //passing 1 parameter to queCounter
+    showQuetions(0); 
+    queCounter(1); 
     
 }
 
@@ -39,12 +39,12 @@ restart_quiz.onclick = ()=>{
     que_numb = 1;
     let userScore = 0;
     widthValue = 0;
-    showQuetions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    next_btn.classList.remove("show"); //hide the next button
-    window.location.reload(); //reload the current window
+    showQuetions(que_count); 
+    queCounter(que_numb); 
+    clearInterval(counter); 
+    clearInterval(counterLine); 
+    next_btn.classList.remove("show"); 
+    window.location.reload(); 
 }
 
 
@@ -54,18 +54,18 @@ const next_btn = document.querySelector("footer .next_btn");
 
 // if Next Que button clicked
 next_btn.onclick = ()=>{
-    if(que_count < questions.length - 1){ //if question count is less than total question length
-        que_count++; //increment the que_count value
-        que_numb++; //increment the que_numb value
-        showQuetions(que_count); //calling showQestions function
-        queCounter(que_numb); //passing que_numb value to queCounter
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
-        next_btn.classList.remove("show"); //hide the next button
+    if(que_count < questions.length - 1){ 
+        que_count++; 
+        que_numb++; 
+        showQuetions(que_count);
+        queCounter(que_numb); 
+        clearInterval(counter); 
+        clearInterval(counterLine); 
+        next_btn.classList.remove("show"); 
     }else{
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
-        showResult(); //calling showResult function
+        clearInterval(counter); 
+        clearInterval(counterLine); 
+        showResult(); 
     }
 }
  
@@ -77,8 +77,8 @@ function showQuetions(index){
     let que_tag = '<span>' + questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>';
-    question_text.innerHTML = que_tag; //adding new span tag inside que_tag
-    option_list.innerHTML = option_tag; //adding new div tag inside option_tag
+    question_text.innerHTML = que_tag; 
+    option_list.innerHTML = option_tag; 
     
     const option = option_list.querySelectorAll(".option");
 
@@ -91,15 +91,15 @@ function showQuetions(index){
 
 //if user clicked on option
 function optionSelected(answer){
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    var userAns = answer.textContent; //getting user selected option
-    let correcAns = questions[que_count].answer; //getting correct answer from array
-    const allOptions = option_list.children.length; //getting all option items
+    clearInterval(counter); 
+    clearInterval(counterLine); 
+    var userAns = answer.textContent; 
+    let correcAns = questions[que_count].answer; 
+    const allOptions = option_list.children.length; 
     
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-        userScore += 1; //means that the 'score' is equal to what the user has selected
-        answer.classList.add("selected"); //adding green color to correct selected option
+        userScore += 1; 
+        answer.classList.add("selected"); 
         console.log("Selected Answer");
         console.log("Your selected answers = " + userAns);
     }
@@ -108,18 +108,18 @@ function optionSelected(answer){
         answer.classList.add("selected"); //adding green color to correct selected option
         console.log("Selected Answer");
         for(i=0; i < allOptions; i++){
-            if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
-                option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
+            if(option_list.children[i].textContent == correcAns){ 
+                option_list.children[i].setAttribute("class", "option correct"); 
                 console.log("Auto selected correct answer.");
             }
         }
     }
     
     for(i=0; i < allOptions; i++){
-        option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
+        option_list.children[i].classList.add("disabled"); 
     }
 
-    next_btn.classList.add("show"); //show the next button if user selected any option
+    next_btn.classList.add("show"); 
 }
 
 
@@ -130,10 +130,9 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const result_text = result_box.querySelector(".result_text");
-    if (userScore >= 7){ // if user selected YES in more than  3 questions 
-        //creating a new span tag and passing the user score number and total question number
+    if (userScore >= 7){  
         let scoreTag = '<span><p> Seems like you are on top of your mental health, well done! </br> Try some <a href="https://www.youtube.com/watch?v=ZToicYcHIOU">meditation</a> to keep you on track!</p></span>'  ;
-        result_text.innerHTML = scoreTag;  //adding new span tag inside result_text
+        result_text.innerHTML = scoreTag;  
     }
     else if(userScore <=3){ // if user selected YES in less than  3 questions 
         let scoreTag = '<span><p> Seems like you might be strugglinh with your mental health. </br> Check out this <a href="https://www.mind.org.uk/information-support/">Information and support services</a> to help you with your journey to improving your mental health.</p></span>';
